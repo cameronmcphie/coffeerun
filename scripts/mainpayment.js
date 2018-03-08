@@ -2,7 +2,6 @@
   "use strict";
   var FORM_SELECTOR = "[data-payment-info=\"form\"]";
 
-  //var $ = window.jQuery;
   var App = window.App;
 
   var FormHandler = App.FormHandler;
@@ -28,11 +27,8 @@
     $p.append(text);
     $div.append($p);
     $div.append($a);
-    //console.log($div);
 
     $div.modal();
-
-
   });
-  //console.log(formHandler);
+  console.log(formHandler);
 })(window);
