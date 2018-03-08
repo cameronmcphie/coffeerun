@@ -1,4 +1,4 @@
-(function (window) {
+(function(window) {
   "use strict";
   var FORM_SELECTOR = "[data-payment-info=\"form\"]";
   var TEXT_INSERT = "[data-payment-info=\"modal\"]";
@@ -9,13 +9,12 @@
   var FormHandler = App.FormHandler;
   var formHandler = new FormHandler(FORM_SELECTOR);
 
-  formHandler.addSubmitHandler(function (data) {
-    console.log(data);
+  formHandler.addSubmitHandler(function(data) {
     var $ = window.jQuery;
     var title = data.title;
     var name = data.username;
     var $div = $("<div></div>", {
-      "id": "affirmMessage",
+      "id": "text",
       "class": "modal"
     });
     var $p = $("<p></p>");
@@ -32,8 +31,7 @@
     $div.append($a);
     console.log($div);
 
-    $(TEXT_INSERT).append($div);
-
+    $div.modal();
 
 
   });
