@@ -25,15 +25,14 @@
       "rel": "modal:close"
     });
 
-    var text = "Thank you for your payment," + title + name;
+    var text = "Thank you for your payment, " + " " + title + " " + name;
 
     $p.append(text);
     $div.append($p);
     $div.append($a);
     console.log($div);
 
-
-    $div.add(TEXT_INSERT);
+    $(TEXT_INSERT).append($div);
 
 
 
